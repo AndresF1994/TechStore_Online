@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo - TechStore</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/3313f80c63.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="head_logo">
+            <a href="index.html"><img src="../img/logo.png" alt="Logo TechStore">TechStore</a>
+        </div>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html"><i class="fa-solid fa-tags"></i>Catálogo</a></li>
+                <li><a href="cart.html" class="btn-afp"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="login.html" class="btn-afp-1"><i class="fa-solid fa-arrow-right-to-bracket fa-fade"></i>
+                        Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalog-section">
+            <h2 class="section__title">Catálogo de productos</h2>
+            <div class="filtros">
+                <label for="categoria">Filtrar por categoría:</label>
+                <select id="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="moda">Moda</option>
+                    <option value="salud">Salud</option>
+                </select>
+            </div>
+            <div class="productos_grid" id="catalogo-productos">
+                <!-- Productos cargados con JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="http://www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://x.com/?lang=es"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.instagram.com/#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-square-youtube"></i></a>
+        </div>
+        <div class="footer-clumns">
+            <div class="footer-colum">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Preguntas Frecuentes</a>
+                <a href="#">Centro de Ayuda <i class="fa-regular fa-circle-question"></i></a>
+            </div>
+            <div class="footer-colum">
+                <a href="#">Contáctanos</a>
+                <a href="#">Avisos legales</a>
+                <a href="#">Privacidad</a>
+            </div>
+            <div class="footer-colum">
+                <a href="#">Relaciones con inversionistas</a>
+                <a href="#">Tarjetas de regalos</a>
+                <a href="#">Términos de uso</a>
+            </div>
+            <div class="footer-colum">
+                <a href="#">Prensa</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Contáctanos</a>
+            </div>
+        </div>
+        <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/catalog.js"></script>
+</body>
+
+</html>
