@@ -1,5 +1,4 @@
 // catalog.js - Mostrar productos y restringir acceso sin login
-
 document.addEventListener('DOMContentLoaded', () => {
     const usuarioActivo = JSON.parse(localStorage.getItem('activeUser'));
 
@@ -18,38 +17,52 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 1,
         nombre: "Smartphone X Pro",
         precio: 1450000,
-        imagen: "../img/smartphone.jpg",
-        categoria: "tecnologia"
+        imagen: "../IMG/celular.png",
+        categoria: "tecnologia",
     },
     {
         id: 2,
         nombre: "Audífonos Inalámbricos",
         precio: 260000,
-        imagen: "../img/audifonos.jpg",
-        categoria: "accesorios"
+        imagen: "../IMG/audifonos.png",
+        categoria: "accesorios",
     },
     {
         id: 3,
         nombre: "Smartwatch Fitness",
         precio: 390000,
-        imagen: "../img/smartwatch.jpg",
-        categoria: "salud"
+        imagen: "../IMG/smartwatch.png",
+        categoria: "salud",
     },
     {
         id: 4,
         nombre: "Altavoz Bluetooth",
         precio: 195000,
-        imagen: "../img/altavoz.jpg",
-        categoria: "hogar"
+        imagen: "../IMG/altavoz.png",
+        categoria: "hogar",
     },
     {
         id: 5,
-        nombre: "Gafas VR Pro",
-        precio: 980000,
-        imagen: "../img/gafasvr.jpg",
-        categoria: "tecnologia"
+        nombre: "Altavoz Bluetooth",
+        precio: 195000,
+        imagen: "../IMG/altavoz.png",
+        categoria: "hogar",
     }
 ];
+//FUNCIÓN PARA AGREGAR A CARRITO
+const agregarAlCarrito = (producto) => {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const index = carrito.findIndex(p => p.id === producto.id);
+
+    if (index !== -1) {
+        carrito[index].cantidad += 1;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    alert(`${producto.nombre} agregado al carrito.`);
+};
 
 const mostrarProductos = (lista) => {
     contenedor.innerHTML = '';

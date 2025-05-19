@@ -1,16 +1,16 @@
 // main.js - Carga de productos destacados en la página principal
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // Acceso controlado al catálogo desde el botón del banner
     const verBtn = document.getElementById('ver-productos-btn');
     if (verBtn) {
-        verBtn.addEventListener('click', () => {
+    verBtn.addEventListener('click', () => {
         const user = localStorage.getItem('activeUser');
         if (user) {
-        window.location.href = 'catalog.html';
-    } 
-        else {
-            alert('Debes iniciar sesión para acceder al catálogo.');
-            window.location.href = 'login.html';
-    }
+        window.location.href = 'catalogo.html';
+        } else {
+        alert('Debes iniciar sesión para acceder al catálogo.');
+        window.location.href = 'login.html';
+        }
     });
 }
     const contenedor = document.getElementById("featured-products-container");
