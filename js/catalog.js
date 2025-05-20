@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
     }
 
-    const contenedor = document.getElementById('catalogo-productos');
-    const filtro = document.getElementById('categoria');
+const contenedor = document.getElementById('catalogo-productos');
+const filtro = document.getElementById('categoria');
 
     const productos = [
     {
