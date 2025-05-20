@@ -86,3 +86,4 @@ TechStore-Online/
 **Andrés Felipe Pacheco**  
 Ingeniero Físico  
 Proyecto realizado como parte del Sprint 2 - Interfaz E-commerce
+https://github.com/AndresF1994/TechStore_Online.git
